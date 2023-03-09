@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="Imgweblibre/presibuyer.jfif" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>Presidente</b></h4>
+    <p class="w3-text-grey">Hermanos Buyer</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="file:///C:/Users/alejandrodiazf.car/Desktop/Web%20libre/paginalibre.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Home</a> 
+   
+  </div>
+  <div class="w3-panel w3-large">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>XBuyer Team</b></h1> <img src="data:image/png;base64,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">
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Filter:</span> 
+      <button class="w3-button w3-black">ALL</button>
+    </div>
+    </div>
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/castrox.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>C. Castro</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/Capix.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Capi</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="Imgweblibre/pochx.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Poch</b></p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/iñakix.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Iñaki</b></p>
+       
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/danix.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Dani</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="Imgweblibre/granerox.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Granero</b></p>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/goranx.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Goran</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/bañuls.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Bañuls</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="Imgweblibre/francx.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Franc</b></p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/sierrax.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>B. Sierra</b></p>
+       
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/sep.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Sep</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="Imgweblibre/victrorgonzalezx.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Victor González</b></p>
+        
+      </div>
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+  
+
+ 
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
