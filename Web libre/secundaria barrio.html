@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="Imgweblibre/presiadricontreras.jfif" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>Presidente</b></h4>
+    <p class="w3-text-grey">Adri Contreras</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="file:///C:/Users/alejandrodiazf.car/Desktop/Web%20libre/paginalibre.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Home</a> 
+   
+  </div>
+  <div class="w3-panel w3-large">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>El barrio</b></h1><img src="data:image/png;base64,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">
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Jugadores:</span> 
+      <button class="w3-button w3-black">ALL</button>
+    </div>
+    </div>
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/josejuanb.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>José Juan</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/jacobob.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Jacobo</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="Imgweblibre/maseb.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Mase</b></p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://kingsleague.pro/wp-content/uploads/barrio/9.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Beguer</b></p>
+       
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://kingsleague.pro/wp-content/uploads/barrio/14.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Ros</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="Imgweblibre/ubonb.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Ubón</b></p>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://kingsleague.pro/wp-content/uploads/barrio/19.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Pau ZZ</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/olaeb.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Olae</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="https://kingsleague.pro/wp-content/uploads/barrio/11.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>O. Boada</b></p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/baranerab.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Baranera</b></p>
+       
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Imgweblibre/capillab.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Capilla</b></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="https://kingsleague.pro/wp-content/uploads/barrio/entrenador.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Juan Arroita</b></p>
+        
+      </div>
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+  
+
+ 
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
